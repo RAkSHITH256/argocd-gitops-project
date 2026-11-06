@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_USERNAME/argocd-gitops-project.git
+    repoURL: https://github.com/RAkSHITH256/argocd-gitops-project.git
     targetRevision: main
     path: kubernetes
 
