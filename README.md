@@ -1,41 +1,27 @@
 # GitOps Workflow using ArgoCD and Kubernetes
 
 ## Overview
-Automated Kubernetes deployment using GitOps principles.
+This project demonstrates GitOps-based continuous deployment using ArgoCD and Kubernetes. Kubernetes manifests are stored in GitHub, and ArgoCD continuously monitors the repository and maintains the desired application state.
 
 ## Architecture
-GitHub → ArgoCD → Kubernetes → NGINX
+GitHub Repository → ArgoCD → Kind Kubernetes Cluster → NGINX
 
-## Technologies
+## Technologies Used
 - Fedora Linux
 - Docker
-- Minikube
+- Kind
 - Kubernetes
 - ArgoCD
-- GitHub
+- Git and GitHub
 - NGINX
 
-## Kubernetes Resources
-- Deployment
-- Service
-- Readiness Probe
-- Liveness Probe
-
-## GitOps Features
-- Automated synchronization
-- Self-healing
-- Automatic pruning
-- Git-based configuration management
-
-## Deployment Workflow
-1. Push Kubernetes manifests to GitHub.
-2. ArgoCD monitors the Git repository.
-3. ArgoCD detects configuration changes.
-4. ArgoCD synchronizes Kubernetes resources.
-5. Kubernetes runs the desired application state.
-
-## Testing
-Update the NGINX image version in deployment.yaml
-and push the change to GitHub.
-Observe automatic synchronization in ArgoCD.
-
+## Project Structure
+```text
+argocd-gitops-project/
+├── argocd/
+│   └── application.yaml
+├── kubernetes/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── screenshots/
+└── README.md
